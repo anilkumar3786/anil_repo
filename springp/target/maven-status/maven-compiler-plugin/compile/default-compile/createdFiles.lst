@@ -1,0 +1,12 @@
+com\learnspring\examples\Snippet.class
+com\learnspring\services\AuditoriumService.class
+com\learnspring\vo\Auditorium.class
+com\learnspring\examples\SpringScopeEx.class
+com\learnspring\services\UserService.class
+com\learnspring\vo\Booking.class
+com\learnspring\vo\Event.class
+com\learnspring\servicetest\UserTest.class
+com\learnspring\services\EventService.class
+springp\learn\springcore\App.class
+com\learnspring\vo\User.class
+springp\learn\springcore\HelloWorld.class
