@@ -1,0 +1,9 @@
+com\epam\usertest\UserTest.class
+com\epam\service\UserServiceInterface.class
+com\epam\configs\AppConfig.class
+com\epam\dao\UserDAO.class
+com\epam\App.class
+com\epam\usertest\UserJUnitTest.class
+com\epam\service\UserService.class
+com\epam\vo\User.class
+com\epam\dao\UserDAOInterface.class
