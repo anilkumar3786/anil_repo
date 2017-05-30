@@ -1,14 +1,15 @@
 package com.abcsports.rent.main;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import com.abcsports.rent.bo.SportEquipment;
 import com.abcsports.rent.service.RentUnit;
 
 public class ShoppingController {
-
-	public static void main(String args[]) {
-
+	public ShoppingController sc = new ShoppingController();
+	
+	public static void main(String args[]) throws ArrayIndexOutOfBoundsException, IOException {
 		SportEquipment equipment1 = new SportEquipment();
 		SportEquipment equipment2 = new SportEquipment();
 		SportEquipment equipment3 = new SportEquipment();
@@ -35,12 +36,53 @@ public class ShoppingController {
 
 		System.out.println("Welcome to ABC Sports");
 		System.out.println(" Available Sports Equipment");
-		for (SportEquipment s : units) {
+		
+		Scanner scanner = new Scanner(System.in);
+		Scanner scanner1 = null;
 
-			System.out.println(s.listAvailableEquipments());
+		while (true) {
+
+			System.out.print(
+					"Enter Int values for 1 for Reading/Display the data/2 for searching/3 for exit the application : ");
+			String input = scanner.nextLine();
+			if ("1".equals(input)) {
+				for (SportEquipment s : units) {
+
+					System.out.println(s.listAvailableEquipments());
+				}
+				
+			} else if ("2".equals(input)) {
+				scanner1 = new Scanner(System.in);
+				
+				
+				System.out.print(
+					"Enter Title : ");
+				if (scanner1 != null) {
+					String searchInput = scanner1.nextLine();
+
+					if (sportsUnits.getUnits() != null) {
+						SportEquipment[] sq = sportsUnits.getUnits();
+
+						for (int i = 0; i < sq.length; i++) {
+							if (searchInput.equals(sq[i].getTitle())) {
+								System.out.println(sq[i]);
+							}
+						}
+					}
+				}
+				
+			} else if ("3".equals(input)) {
+				System.out.println("Exit!");
+				break;
+			}
 		}
-    
-    
-    
+
+		scanner.close();
+		scanner1.close();
+
 	}
+	
+	
+	
+	
 }
